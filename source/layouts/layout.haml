@@ -1,42 +1,42 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
-    %meta{charset: 'utf-8'}
-    %title= current_page.data.title || ''
-    %meta{name: 'description', content: ''}
-    %meta{name: 'author', content: ''}
-
-    :plain
-        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-    %link{href: '/stylesheets/style.css', type: 'text/css', rel: 'stylesheet' }
-
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "../../favicon.ico", :rel => "icon"}/
+    %title= current_page.data.title || 'Starter Template for Bootstrap'
+    / Bootstrap core CSS
+    %link{:href => "/stylesheets/style.css", :rel => "stylesheet"}/
+    / HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   %body
-
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          %button.btn.btn-navbar{data: {target: '.nav-collapse', toggle: 'collapse'}, type: 'button'}
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{href: '#'} Project name
-          .nav-collapse.collapse
-            %ul.nav
-              %li.active
-                %a{href: '#'} Home
-              %li
-                %a{href: '#about'} About
-              %li
-                %a{href: '#contact'} Contact
-          / /.nav-collapse
+          %a.navbar-brand{:href => "#"} Project name
+        #navbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} Home
+            %li
+              %a{:href => "#about"} About
+            %li
+              %a{:href => "#contact"} Contact
 
     .container
       = yield
 
-    / Placed at the end of the document so the pages load faster
-    %script{type: 'text/javascript', src: 'http://code.jquery.com/jquery.js'}
-    %script{type: 'text/javascript', src: 'javascripts/main.js'}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    %script{:src => "javascripts/main.js"}
