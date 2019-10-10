@@ -1,3 +1,6 @@
+# Deprecated!
+This repository was not updated in some time and there are old versions and security issues. I won't be updating it any time soon so use at your own risk.
+
 middleman-haml-bootstrap-sass
 =============================
 
