@@ -8,12 +8,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    autoprefixer-rails (6.4.1.1)
+    autoprefixer-rails (9.6.4)
       execjs
     backports (3.6.8)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -97,7 +97,9 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    sass (3.4.22)
+    sass (3.4.25)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     servolux (0.12.0)
     thor (0.19.1)
     thread_safe (0.3.5)
